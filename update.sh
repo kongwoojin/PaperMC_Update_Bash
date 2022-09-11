@@ -66,8 +66,8 @@ get_latest_build(){
 }
 
 get_oldsum(){
-  if [ -f ./paper.jar ]; then
-    oldsum=$(sha256sum paper.jar | awk '{print $1}')
+  if [ -f ./$output_name ]; then
+    oldsum=$(sha256sum $output_name | awk '{print $1}')
   else
     oldsum=""
   fi
